@@ -1,10 +1,10 @@
 package pl.sda.queues;
 
 public class Node<T> {
-    private Node next;
+    private Node<T> next;
     private T value;
 
-    public Node getNext() {
+    public Node<T> getNext() {
         return next;
     }
 

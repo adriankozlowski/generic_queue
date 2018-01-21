@@ -29,17 +29,17 @@ public class MyQueue<T> implements Queue<T> {
     public Iterator iterator() {
         return new Iterator<T>() {
 
-            Node<T> naNastepnąIterację = head;
-            Node<T> aktualnyDoZwrócenia = head;
+            Node<T> nextIteration = head;
+            Node<T> toReturn = head;
 
             public boolean hasNext() {//
-                return naNastepnąIterację != null;
+                return nextIteration != null;
             }
 
             public T next() {
-                aktualnyDoZwrócenia = naNastepnąIterację;
-                naNastepnąIterację = aktualnyDoZwrócenia.getNext();
-                return aktualnyDoZwrócenia.getValue();
+                toReturn = nextIteration;
+                nextIteration = toReturn.getNext();
+                return toReturn.getValue();
             }
         };
     }
