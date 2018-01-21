@@ -7,7 +7,7 @@ public class Main {
         MyQueue<Task> tasks = new MyQueue<>();
         for (int i = 0; i < 10; i++) {
             Task task = new Task();
-            task.setTitle("asdasd" + i);
+            task.setTitle("task " + i);
             task.setCreationDate(LocalDate.now());
             tasks.offer(task);
         }
